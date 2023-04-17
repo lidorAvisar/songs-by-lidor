@@ -3,6 +3,7 @@ const http = require("http");
 const path = require("path");
 
 const {routesInit} = require("./routes/configRoutes")
+require('./db/mongoConnect')
 
 const app = express();
 // מאפשר לשלוח באדי דרך הצד לקוח
