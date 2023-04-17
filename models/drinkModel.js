@@ -8,3 +8,13 @@ const drinkSchema=new mongoose.Schema({
 })
 
 exports.DrinkModel= mongoose.model('drinks',drinkSchema);
+
+
+exports.validatDrink = (_reqBody) => {
+    const joiSchema = Joi.object({
+      name:Joi.string().min(2).max(150).required(),
+      ml:Joi.number().min(1).max(9999).required(),
+      price:Joi.number().min(1).max(999).required()
+    })
+    return joiSchema.validate(_reqBody);
+  }
