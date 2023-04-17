@@ -8,6 +8,7 @@ singer:String,
 youtube_url:String,
 genere:String,
 },{timestamps:true})
+
 exports.SongModel = mongoose.model("songs",songsChema)
 
 exports.validateSongs = (_reqBody) => {
