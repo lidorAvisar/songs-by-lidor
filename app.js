@@ -17,3 +17,4 @@ routesInit(app);
 const server = http.createServer(app);
 const port = process.env.PORT || 3003
 server.listen(port);
+console.log('express work!');
